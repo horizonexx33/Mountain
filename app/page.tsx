@@ -1,6 +1,8 @@
+
 import type { Metadata } from "next";
 import Content from "~/components/widgets/Content";
 import Hero from "~/components/widgets/Hero";
+import Comps from "~/components/widgets/wdtsSlide";
 import { SITE } from "~/config";
 
 
@@ -12,6 +14,7 @@ import {
   featuresData,
   heroData,
   pricingData,
+  slideInformation,
   socialProofData,
 }
 from '~/shared/data';
@@ -26,6 +29,8 @@ export default function Page() {
     <>
     <Hero data={heroData} />
     <Content {...pricingData} />
+    <Comps data={slideInformation}/> 
+    
     </>
   )
 }

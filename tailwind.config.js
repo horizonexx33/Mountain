@@ -3,7 +3,8 @@ const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./app/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx,md,mdx}'],
+  content: ['node_modules/flowbite-react/**/*.{js,ts,jsx,tsx,}', './src/**/*.{js,ts,jsx,tsx,md,mdx}'],
+
   theme: {
     extend: {
       spacing: {
@@ -19,6 +20,6 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'), require('flowbite/plugin')],
   darkMode: 'class',
 };

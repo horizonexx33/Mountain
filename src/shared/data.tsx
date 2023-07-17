@@ -35,12 +35,16 @@ import {
   HeaderProps,
   HeroProps,
   PricingProps,
+  slideProps,
   SocialProofProps,
   StatsProps,
   StepsProps,
   TeamProps,
   TestimonialProps,
 } from './types';
+import { title } from 'process';
+import imageSlide from '~/assets/image/image.jpeg'
+import { subtle } from 'crypto';
 // import cameraFrontImg from '~/assets/images/camera-front.jpg';
 // import cameraBackImg from '~/assets/images/camera-back.jpg';
 // import heroImg from '~/assets/images/hero.jpg';
@@ -119,6 +123,34 @@ export const headerData: HeaderProps = {
   showRssFeed: false,
   position: 'right',
 };
+
+
+//space slide information
+export const slideInformation: slideProps = {
+  title: (
+    <>
+    <div>
+      Mountain expedition
+    </div>
+     </>
+  ),
+ 
+  subtitle: (
+    <>
+    <div className='hidden md:inline'>
+      <span className=''>List expedition</span>
+    </div>
+    
+    </>
+   ),
+    image: {
+    src: imageSlide,
+    alt: 'Hero TailNext',
+  },
+};
+
+
+
 
 // Hero data
 export const heroData: HeroProps = {
@@ -895,10 +927,12 @@ export const testimonialData: TestimonialProps = {
   ],
 };
 
-// Pricing data
+
+
+// Pricing data --?
 export const pricingData: PricingProps = {
   header: {
-    title: 'Prices for each plan',
+    title: 'Other',
     subtitle:
       'Proin eget vestibulum sem, vel ultrices ligula. Vestibulum in eleifend lectus, non mollis odio. Donec nibh ipsum, suscipit non pulvinar quis, lobortis ac lorem.',
     // highlight: 'Pricing',

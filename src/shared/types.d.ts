@@ -145,6 +145,7 @@ interface Tab {
   items: Array<Item>;
 }
 
+
 interface Dropdown {
   options: Tab[];
   activeTab: number;
@@ -152,7 +153,12 @@ interface Dropdown {
   iconUp?: ReactElement;
   iconDown?: ReactElement;
 }
-
+interface slideProps{
+  title?: string | ReactElement;
+  subtitle?: string | ReactElement;
+  image?: Image;
+  
+}
 interface HeroProps {
   title?: string | ReactElement;
   subtitle?: string | ReactElement;
@@ -218,6 +224,8 @@ interface TestimonialProps {
   header?: Header;
   testimonials: Array<Testimonial>;
 }
+
+
 
 interface PricingProps {
   header?: Header;
